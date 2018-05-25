@@ -1,0 +1,257 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    font-family: "ariel", "Helvetica";
+    width      : 100%;
+    height     : 100%;
+    margin: 0;
+}
+
+header {
+    width           : 100%;
+    position        : fixed;
+    top             : 0;
+    z-index         : 99;
+}
+#socialLogos {
+    float        : right;
+    padding-right: 15px;
+}
+#topNav {
+    width           : 100%;
+    height          : 70px;
+    float           : left;
+    background-color: white;
+}
+#topNav ul {
+    list-style: none;
+    margin-top: 25px;
+
+}
+#topNav li {
+    display: inline;
+    float  : left;
+    
+}
+#topNav a {
+    text-decoration: none;
+    color          : gray;
+    padding-right  : 55px;
+}
+#topNav a:active {
+    color: #8468ff;
+}
+
+#welcomeScreen {
+    position        : relative;
+    top             : 70px;    
+    margin          : auto;
+    width           : 90%;
+    background-color: lightgray;
+    height          : 600px;
+    text-align      : center;
+    color           : white;
+    background      : url("../images/bg-2.webp") no-repeat;
+    background-size : cover;
+    
+}
+#flask {
+    padding-top: 100px;
+    width      : 100px;
+    
+}
+#factory {
+    font-size: 80px;
+}
+#homemade {
+    font-size    : 30px;
+    margin-bottom: -50px;
+    
+}
+/*SHOP SECTION*/
+
+#shop {
+    margin  : 0 auto;
+    width   : 90%;
+    position: relative;
+    top     : 70px;
+}
+#shopHeader {
+    color     : #8468ff;
+    font-size : 30px;
+    text-align: center;
+    padding   : 20px 0;
+}
+#productGallery {
+    width         : 100%;
+    display       : flex;
+    flex-direction: row;
+    margin-bottom : 16px;
+}
+.product-col {
+    flex: 50%;
+}
+
+.productImgage {
+    display      : flex;
+    width        : 80%;
+    margin       : auto;
+    align-content: center;
+    
+}
+
+div.desc {
+    text-align : center;
+    padding    : 15px;
+    line-height: 1.5em;
+    font-weight: 100;
+    color      : gray;
+}
+.price {
+    color      : #8468ff;
+    font-weight: bold;
+}
+.product {
+    position: relative;
+    height  : 327px;
+    overflow: hidden;
+}
+.productImgage:hover {
+    transform: scale(1.1);
+    cursor   : pointer;
+}
+.quickView {
+    height          : 50px;
+    width           : 327px;
+    background-color: #8468ff; 
+    color           : white;
+    text-align      : center;
+    font-size       : 20px;
+    transition      : .5s;
+    position        : absolute;
+    bottom          : -50px;
+}
+.product:hover .quickView {
+    transition: .5s;
+    bottom    : 2px;
+}
+#about {
+    background-image: url(../images/purpleBackground.jpg);
+    width           : 90%;
+    margin          : 0 auto;
+    height          : 500px;
+    background-color: lightgray;
+    position        : relative;
+    top             : 54px;
+}
+#aboutHeader {
+    font-size: 30px;
+}
+#aboutParagraph {
+    font-size  : small;
+    line-height: 1.8em;
+    animation  : fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+#aboutContainer {
+    color     : white;
+    margin    : auto;
+    position  : relative;
+    text-align: center;
+    top       : 30%;
+    width     : 400px;
+}
+
+/*GOOD TO KNOW*/
+
+#goodKnow {
+    height          : 500px;
+    margin          : 90px auto;
+    width           : 90%;
+}
+
+#goodKnowHeader {
+padding-top        : 60px;
+color              : #8468ff;
+font-size          : 30px;
+text-align         : center;
+background-image   : url(../images/cloud.png);
+background-position: top center;
+background-repeat  : no-repeat;
+background-size    : 45px 45px;
+}
+
+#symbols {
+    width  : 80%;
+    height : 400px;
+    margin : auto;
+    display: flex;
+    }
+
+#homemade {
+    /*position   : relative;*/
+    background   : linear-gradient(to right, #bef6ec, #7eedd6);
+    border-radius: 100%;
+    height       : 200px;
+    width        : 200px;
+    /*float      : left;*/
+    display      : inline-flex;
+    margin       : auto;
+}
+/*#homemade p {
+    color     : gray;
+    font-size : small;
+    text-align: center;
+    position  : relative;
+    top       : 50px;
+}*/
+#borax {
+    background   : linear-gradient(to right, #fdc0a3 15%, #ff96b4);
+    border-radius: 100%;
+    height       : 200px;
+    width        : 200px;
+    display      : inline-flex;
+    margin       : auto;
+
+}
+/*#borax p {
+    color     : gray;
+    font-size : small;
+    position  : absolute;
+    text-align: center;
+    bottom    : 50px;
+    left      : 379px;
+}*/
+#temperature {
+    background   : linear-gradient(to right, #d3c9fe 15%, #a28eff);
+    border-radius: 100%;
+    height       : 200px;
+    width        : 200px;
+    margin       : auto;
+    display      : inline-flex;
+}
+.insideLogo {
+    width    : 40%;
+    /*display: inline-flex;*/
+    margin   : auto;
+    filter: invert(100%);
+}
+
+
+
+/*CONTACT*/
+#contact {
+    width           : 90%;
+    height          : 500px;
+    background-color: blue;
+    margin          : 0 auto;
+    position        : relative;
+    top             : 8px;
+    color           :white;
+}
+#contact p {
+    text-align: center;
+}
