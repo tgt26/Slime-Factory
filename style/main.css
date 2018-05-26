@@ -273,10 +273,10 @@ form.sign-up-form {
 input::placeholder, textarea::placeholder {
     color: white;
 }
- input:focus, textarea:focus {
+#message:focus, #name:focus, #email:focus, #subject:focus {
     border-bottom: 1px solid black;
     outline: none;
-    background-color: #ccc;
+    transition: border-bottom 1s ease-in-out;
 }
 
 form.sign-up-form input, #message {
