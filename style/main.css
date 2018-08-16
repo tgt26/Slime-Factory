@@ -8,51 +8,109 @@ body {
     width      : 100%;
     height     : 100%;
     margin     : 0;
-    padding: 0;
+    padding    : 0;
+    transition : 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 .section-heading {
     font-size: 2rem;
 }
 
-header {
+/*header {
     width           : 100%;
     position        : fixed;
     top             : 0;
     z-index         : 99;
-}
+}*/
 
 
 /*NAVIGATION BAR*/
 
-#socialLogos {
+.social-logos {
     float        : right;
     padding-right: 15px;
 }
-#topNav {
+
+.top-nav {
+    position        : fixed;
+    top             : 0;
+    z-index         : 1;
     width           : 100%;
     height          : 70px;
     float           : left;
     background-color: white;
 }
-#topNav ul {
+
+.top-nav ul {
     list-style: none;
     margin-top: 25px;
 
 }
-#topNav li {
+
+.top-nav li {
     display: inline;
     float  : left;
     
 }
-#topNav a {
+
+.top-nav a {
     text-decoration: none;
     color          : gray;
     padding-right  : 55px;
 }
-#topNav a:active {
+
+
+/*SIDE NAVIGATION*/
+
+.nav-toggle {
+    display: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.nav-toggle:hover {
     color: #8468ff;
 }
+
+.side-nav {
+    /*display: none;*/
+
+}
+
+.side-nav {
+    width           : 0;
+    height          : 100%;
+    position        : fixed;
+    left            : 0;
+    background-color: lavender;
+    z-index         : 2;
+    overflow-x      : hidden;
+    transition      : 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.side-nav ul {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.side-nav li {
+    padding: 1rem 0;    
+}
+
+.side-nav a {
+    display: block;
+    text-decoration: none;
+    color          : gray;
+    font-size: 2rem;
+}
+
+.close-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+}
+/*LANDING PAGE*/
 
 .welcome-screen {
     position        : relative;
@@ -75,11 +133,7 @@ header {
     font-size: 5rem;
 }
 
-/*#homemade {
-    font-size    : 30px;
-    margin-bottom: -50px;
-    
-}*/
+
 /*-------------------------------------
             SHOP SECTION
 --------------------------------------*/
@@ -335,5 +389,18 @@ form.sign-up-form input, #message {
 
     .good-to-know {
         margin-bottom: 90px;
+    }
+}
+
+
+
+@media(max-width: 560px) {
+
+    .top-nav ul li:not(:first-child) {
+        display: none;
+    }
+    
+    .nav-toggle {
+        display: block;
     }
 }

@@ -1,26 +1,36 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Slime Factory</title>
         <link href="style/main.css" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" href="images/slime.png" />
-        <script src="script/main.js" async></script>
     </head>
     <body>
         <header>
-            <nav id="topNav">
+            <nav class="top-nav">
                 <ul>
-                    <li><a active href="index.html">Home</a></li>
+                    <li><a class="nav-toggle" onclick="openNav()" href="javascript:void(0)">&#9776;</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-                <div id="socialLogos">
+                <div class="social-logos">
                     <img src="images/social/instagram.png" alt="instagram logo">
                     <img src="images/social/youtube.png" alt="youtube logo">
                     <img src="images/social/facebook.png" alt="faecbook logo">
                 </div>
+            </nav>
+            
+            <nav class="side-nav" id="my-side-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
             </nav>
         </header>
         <section class="welcome-screen">
@@ -131,7 +141,6 @@
                 <p id="aboutParagraph" contenteditable="true">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
             </div>
         </section>
-
         <!-- GOOD TO KNOW SECTION BEGINS -->
         <section class="good-to-know">
             <p class="good-heading section-heading">GOOD TO KNOW</p>
@@ -159,7 +168,6 @@
             </div>
         </section>
         <!-- GOOD TO KNOW SECTION ENDS -->
-
         <section id="contact">
             <img class="airplane" src="images/paper-plane.svg" alt="Airplane Logo">
             <p class="contact-me section-heading">CONTACT ME</p>
@@ -171,5 +179,17 @@
                 <textarea name="message" cols="30" rows="10" placeholder="Message" id="message"></textarea>
             </form>
         </section>
+        
+        <script>
+            function openNav() {
+                document.getElementById('my-side-nav').style.width = "250px";
+                document.body.style.marginLeft = "250px";
+            }
+           
+            function closeNav() {
+                document.getElementById('my-side-nav').style.width = "0";
+                document.body.style.marginLeft = "0";
+            }
+        </script>
     </body>
 </html>
